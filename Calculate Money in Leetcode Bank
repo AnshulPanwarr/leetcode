@@ -1,0 +1,15 @@
+class Solution {
+    public int totalMoney(int n) {
+        int res = 0;
+        int week = 0;
+
+        for (int i = 1; i <= n; i++) {
+            if ((i - 1) % 7 == 0) {
+                week++;
+            }
+            res += week + (i - 1) % 7;
+        }
+
+        return res;
+    }
+}
